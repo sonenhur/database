@@ -1,0 +1,24 @@
+spring:
+  config:
+    import:
+      - classpath:/application-jwt.yml
+      - classpath:/application-oauth.yml
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/~/.h2/MyPetFinder
+#    url: jdbc:h2:tcp://localhost/~/MyPetFinder
+    username: sa
+    password: 1234
+
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+#server:
+#  port: 8081
